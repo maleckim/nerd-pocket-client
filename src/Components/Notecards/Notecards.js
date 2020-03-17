@@ -11,6 +11,7 @@ import pocketService from '../../Services/pocket-api-service'
 export default class Notecards extends Component {
 
   deleteNote = (id) => {
+    console.log(id)
     pocketService.deleteNoteCard(id)
     window.location.reload()
   }
@@ -22,7 +23,7 @@ export default class Notecards extends Component {
     return (
       <userContext.Consumer>{
         value => {
-          console.log(value)
+          if(value.length != 0){
           return (
             
             <div className='notecards'>
@@ -33,11 +34,15 @@ export default class Notecards extends Component {
                 <p>{a.question}</p>
                 <AnswerButton className='button' answer={a.answer} />
                 <EditNotecard className='button' subject={a.subject} question={a.question} answer={a.answer} />
-                <button onClick={() => this.deleteNote(a.Id)}>delete</button> 
+                <button onClick={() => this.deleteNote(a.id)}>delete</button> 
                 </div>
               )}
             </div>
-          )
+          )}else{
+            return(
+              <p>No notecards to show yet!</p>
+            )
+          }
         }
       }
       </userContext.Consumer>
