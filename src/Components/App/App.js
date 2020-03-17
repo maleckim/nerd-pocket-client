@@ -3,10 +3,10 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import LoginPage from '../../Routes/LoginPage/LoginPage'
 import RegistrationPage from '../../Routes/RegistrationPage/RegistrationPage'
 import Dashboard from '../../Routes/Dashboard/Dashboard'
-import PrivateRoute from '../Utils/PrivateRoute'
+// import PrivateRoute from '../Utils/PrivateRoute'
 import Header from '../Header/Header'
-import ApiService from '../../Services/pocket-api-service';
-import UserContext from '../../Context/ApplicationContext';
+// import ApiService from '../../Services/pocket-api-service';
+// import UserContext from '../../Context/ApplicationContext';
 
 
 
@@ -19,14 +19,8 @@ export default class App extends Component {
   }
 
 
-
-
-
-
   render() {
-
     return (
-
       <>
         <header className='Main_header'>
           <Header />
@@ -43,7 +37,6 @@ export default class App extends Component {
 
         </main>
       </>
-
     )
   }
 }

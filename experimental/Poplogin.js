@@ -12,8 +12,6 @@ export default class Poplogin extends React.Component {
     super(props);
     this.state = { 
       open: false,
-      user: null,
-      pass: null,
      };
 
     this.openModal = this.openModal.bind(this);
@@ -26,19 +24,7 @@ export default class Poplogin extends React.Component {
     this.setState({ open: false });
   }
 
-  handleSubmit = e => {
-    e.preventDefault()
-    const { user, pass } = this.state
 
-    const data = {
-      userName: user,
-      userPassword: pass
-    }
-
-      ApiService.validateLogin(data, this.props.onLoginSuccess, this.props.onLoginFail)
-      
-      this.state = null
-  }
 
   render() {
     return (

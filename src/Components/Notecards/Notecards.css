@@ -1,0 +1,26 @@
+.notecards{
+  margin-top: 15px;
+  width:35%;
+  margin:0 auto;
+  
+}
+
+.notecard{
+  text-align: center;
+  margin-top:10px;
+  border:solid 1px black;
+}
+
+.button{
+  display: inline-block;
+}
+
+input, textarea{
+  width: 70%
+}
+
+.addNote, .noteHead{
+  text-align: center;
+  margin: 0 auto;
+}
+

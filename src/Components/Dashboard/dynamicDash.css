@@ -4,5 +4,12 @@
   justify-content: space-around;
   border: 1px solid green;
   width: 100%
-  
+}
+
+ button, input[type='submit']{
+  height:30px;
+  border-radius: 5px;
+  background:transparent;
+  border-style:solid;
+  border: solid 1px black;
 }
