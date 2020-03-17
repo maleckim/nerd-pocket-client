@@ -4,14 +4,21 @@ import DynamicDash from '../../Components/Dashboard/dynamicDash'
 import Notecards from '../../Components/Notecards/Notecards'
 import Notes from '../../Components/Notes/Notes'
 import Deadlines from '../../Components/Deadlines/Deadlines'
+import tokenService from '../../Services/token-service'
+import pocketService from '../../Services/pocket-api-service'
 
 
 
 
 export default class Dashboard extends Component {
 
+  componentDidMount(){
+    const id = tokenService.getUserId()
+    pocketService.getNoteCards(id)
+  }
 
   render() {
+
     return (
       <>
         <DynamicDash />

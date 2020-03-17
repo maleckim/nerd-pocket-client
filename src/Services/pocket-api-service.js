@@ -38,6 +38,15 @@ const PocketApiService = {
       })
   },
 
+  getNoteCards(id){
+    return fetch(`http://localhost:8000/api/notecards?userId=${id}`)
+      .then(res => {
+        if(res.ok){
+          return res.json().then(resJSON=>{console.log(resJSON)})
+        }
+      })
+  }
+
 
 }
 

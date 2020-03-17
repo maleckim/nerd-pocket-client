@@ -6,7 +6,7 @@ export default class dynamicDash extends Component {
 
   render() {
     return (
-      <nav class="dash-nav">
+      <nav className="dash-nav">
         <Link to='/dashboard/notecards'>Note-Cards</Link>
         <Link to='/dashboard/notes'>Notes</Link>
         <Link to='/dashboard/deadlines'>Deadlines</Link>
