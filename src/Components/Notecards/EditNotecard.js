@@ -1,5 +1,7 @@
 import React from 'react';
 import Popup from 'reactjs-popup'
+import pocketService from '../../Services/pocket-api-service'
+import tokenService from '../../Services/token-service'
 
 
 export default class EditNotecard extends React.Component {
@@ -9,7 +11,8 @@ export default class EditNotecard extends React.Component {
       open: false,
       question: this.props.question,
       answer: this.props.answer,
-      subject: this.props.subject
+      subject: this.props.subject,
+      note_id: this.props.note_id
      };
 
     this.openModal = this.openModal.bind(this);
@@ -24,8 +27,12 @@ export default class EditNotecard extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    //implement a patch here
-    console.log(this.state)
+ 
+    const id = tokenService.getUserId();
+
+    pocketService.editNoteCard(id, this.state)
+    window.location.reload()
+    this.closeModal()
   }
 
   

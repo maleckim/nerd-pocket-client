@@ -20,7 +20,7 @@ export default class LoginPage extends Component {
 
   handleLoginFail = (message) => {
     this.setState({
-      error: message.error
+      error: message
     })
     const { location, history } = this.props
     history.push('/login') 
