@@ -1,18 +1,22 @@
 .notecards{
   margin-top: 15px;
-  width:35%;
-  margin:0 auto;
-  
+  width:45%;
+  margin:0 auto; 
 }
 
 .notecard{
   text-align: center;
   margin-top:10px;
   border:solid 1px black;
+  background-color: white;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Notecard.jpg');
+  background-size: contain;
 }
 
 .button{
   display: inline-block;
+  margin-right:5px;
+  margin-bottom:5px;
 }
 
 input, textarea{
@@ -24,3 +28,61 @@ input, textarea{
   margin: 0 auto;
 }
 
+.popup-overlay{
+  color:indigo;
+}
+
+.notecardTest{
+  color:white;
+  background-color:rgb(137, 18, 221);
+  height:45%;
+  margin-top:10vh;
+  line-height: 60px;
+  text-align: center;
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.notecardTest input{
+  width:55vw;
+  height:5vh;
+  color:indigo;
+  font-size: 25px;
+}
+
+.testForm{
+  margin-top:5vh;
+}
+
+.testForm button{
+  background-color:rgb(72, 11, 116);
+}
+
+.topButtons{
+  margin-top:10px;
+  width:100vw;
+}
+
+.testScore{
+  margin-top:10vh;
+  color:white;
+  text-align: center;
+}
+
+.testScore button{
+  margin-top: 10vh;
+  margin-right:10px;
+}
+
+.feedback{
+  color:white;
+  margin-top:5vh;
+  padding:10px;
+  line-height: 30px;
+  background-color: rgb(137, 18, 221);
+}
+
+.feedback p{
+  text-decoration: underline rgb(72, 11, 116);
+}

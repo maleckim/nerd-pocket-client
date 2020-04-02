@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import ValidationError from '../../Errors/ValidationError'
 import ApiService from '../../Services/pocket-api-service'
-import UserContext from '../../Context/ApplicationContext';
+import './LoginForm.css'
 
 
 export default class LogMeIn extends React.Component {
@@ -27,14 +25,14 @@ export default class LogMeIn extends React.Component {
 
       ApiService.validateLogin(data, this.props.onLoginSuccess, this.props.onLoginFail)
       
-      this.state = null
+      this.setState({user: null, pass: null})
   }
   
   
     render(){
   
     return (
-      <>
+    <section className='loginPage'>  
       <div className='logInHead'>
         <h1>Sign in to Nerd-Pocket!</h1>
       </div>
@@ -48,26 +46,8 @@ export default class LogMeIn extends React.Component {
           <input type='submit'/>
         </form>
       </div>
-      </>
+    </section>  
     
       )
     }
   }
-
-
-
-   // SignIn = (e, name, pass) => {
-  //   e.preventDefault();
-  //   let data = { name: name.toLowerCase(), passw: pass }
-  //   this.props.updateUser( name );
-  //   this.props.validateUser( data, this.Redirect );  
-  // }
-  
-  // Redirect = (res) => {
-  //   if(res){
-  //   this.setState({ pass: null })
-  //   this.props.history.push('/dashboard')
-  //   }else{
-  //     this.setState({ failed: true })
-  //   }
-  // }

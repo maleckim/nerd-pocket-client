@@ -1,0 +1,45 @@
+.folders{
+  width:50%;
+  height:50%;
+  padding:10px;
+}
+
+.addnote{
+  margin-top:5px;
+  padding:10px;
+  margin-left:5px;
+}
+
+.backButton{
+  color:white;
+  border: 1px solid white;
+  font-size: 20px;
+}
+
+.folders button{
+  display:block;
+  margin-top:15px;
+  width: 80%;
+}
+
+.noteContent{
+  color:white;
+  margin-top:5vh;
+  text-align: center;
+  background-color: rgb(137, 18, 221);
+  width:75%;
+  height:25%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.noteContent p{
+  margin-top:5%;
+}
+
+.noteContent button{
+  margin-top:20px;
+  margin-right:10px;
+  background-color: rgb(72, 11, 116);
+  width:20%;
+}

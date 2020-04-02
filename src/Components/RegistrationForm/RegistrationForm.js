@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ValidationError from '../../Errors/ValidationError'
 import ApiService from '../../Services/pocket-api-service'
+import './RegistrationForm.css'
 
 export default class RegistrationForm extends Component {
   constructor(props) {
@@ -39,12 +40,15 @@ export default class RegistrationForm extends Component {
 
   render() {
     return (
-      <>
+      <section className='registrationPage'>
+        <div className='logInHead'>
+          <h1>Register here!</h1>
+        </div>
         <div className='signIn'>
           <form className='signForm' onSubmit={e => {
             this.validateEntry(e)
           }}>
-            <label>Username</label><br />
+            <label>User Name</label><br />
             <input type='text' name='user' value={this.state.username} onChange={e => this.setState({ username: e.target.value })} /><br />
             <label>Password</label><br />
             <input type='text' name='pass' value={this.state.password} onChange={e => this.setState({ password: e.target.value })} /><br />
@@ -52,7 +56,7 @@ export default class RegistrationForm extends Component {
             {this.state.badEntry && <ValidationError render={this.state.error} />}
           </form>
         </div>
-      </>
+      </section>
     )
   }
 

@@ -1,5 +1,5 @@
 import React, { Component, forwardRef } from 'react'
-import { Link, Redirect, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import userContext from '../../Context/ApplicationContext'
 import './Notecards.css'
 import AnswerButton from './ShowAnswer'
@@ -11,7 +11,6 @@ import pocketService from '../../Services/pocket-api-service'
 export default class Notecards extends Component {
 
   deleteNote = (id) => {
-    console.log(id)
     pocketService.deleteNoteCard(id)
     window.location.reload()
   }
@@ -27,10 +26,12 @@ export default class Notecards extends Component {
           return (
             
             <div className='notecards'>
-              <AddNotecard className='addNote'/>
-              <Link to='/dashboard/notecards/test'><button>Test</button></Link>
+              <div className='topButtons'>
+                <AddNotecard className='addNote'/>
+                <Link to='/dashboard/notecards/test'><button>Test</button></Link>
+              </div>
               {value.notecards.map((a, b) =>
-                <div className='notecard'>
+                <div key={b} className='notecard'>
                 <h3>{a.subject}</h3>
                 <p>{a.question}</p>
                 <AnswerButton className='button' answer={a.answer} />

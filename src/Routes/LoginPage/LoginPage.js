@@ -12,7 +12,7 @@ export default class LoginPage extends Component {
   }
 
   handleLoginSucces = (message) => {
-    const { location, history } = this.props
+    const { history } = this.props
     tokenService.saveUserId(message.success)
     history.push('/dashboard') 
     window.location.reload()
@@ -22,16 +22,16 @@ export default class LoginPage extends Component {
     this.setState({
       error: message
     })
-    const { location, history } = this.props
+    const { history } = this.props
     history.push('/login') 
   }
 
   render() {
     return (
-      <section className='LoginPage'>
+      <>
         <LoginForm onLoginSuccess={this.handleLoginSucces} onLoginFail={this.handleLoginFail} />
         {this.state.error && <ValidationError render={this.state.error} />}
-      </section>
+      </>
     )
   }
 }

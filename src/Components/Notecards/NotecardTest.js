@@ -62,10 +62,11 @@ createTest = () => {
 
   if(count >= this.state.notecards.length){
     return(
-      <p>you answered {this.state.score} of {this.state.notecards.length} questions correctly, 
-      <button onClick={() => this.setState({feedback:true})}>feedback?</button>
-      <button onClick={() => this.setState({question:0, wrong:{}, score:0, feedback:false})}>try again</button>
-      </p>
+      <div className='testScore'>
+        <p>you answered {this.state.score} of {this.state.notecards.length} questions correctly.</p>
+        <button onClick={() => this.setState({feedback:true})}>feedback?</button>
+        <button onClick={() => this.setState({question:0, wrong:{}, score:0, feedback:false})}>try again</button>
+      </div>
     )
   }
 
@@ -74,12 +75,13 @@ createTest = () => {
   
   if(this.state.notecards.length > 0){
     return(
-      <form onSubmit={e => this.handleInput(e)}>
-        <label>{question}</label>
-        <input type='text' value={this.state.userAnswer} onChange={e => this.setState({userAnswer:e.target.value})}/>
+    <div className='notecardTest'>
+      <form className='testForm' onSubmit={e => this.handleInput(e)}>
+        <label>{question}</label><br />
+        <input type='text' value={this.state.userAnswer} onChange={e => this.setState({userAnswer:e.target.value})}/><br />
         <button type='submit'>answer</button>
       </form>
-
+    </div>
     )
   }
 
@@ -89,7 +91,7 @@ feedback = () => {
   let wrong = this.state.wrong
   
   return(
-    Object.values(wrong).map(a => <p>Question {a[0]}?<br /> You answered -- '{a[2]}'<br /> correct answer was -- '{a[1]}'.</p>)
+    Object.values(wrong).map(a => <div className='feedback'><p>Question: {a[0]}?<br /> You answered -- '{a[2]}'<br /> correct answer was -- '{a[1]}'.</p></div>)
   )   
 }
 

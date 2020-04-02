@@ -2,14 +2,17 @@
   display:inline-flex;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid gray;
-  width: 100%
+  width: 100%;
+  background-color:rgb(97, 9, 160);
+  height:50px;
 }
 
+
  button, input[type='submit']{
-  height:30px;
+  height:40px;
   border-radius: 5px;
-  background:transparent;
+  background:rgb(137, 18, 221);
   border-style:solid;
-  border: solid 1px black;
+  border:none;
+  color:white;
 }

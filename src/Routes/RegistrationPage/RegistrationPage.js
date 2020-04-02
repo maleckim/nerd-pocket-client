@@ -25,11 +25,10 @@ export default class RegistrationPage extends Component {
 
   render() {
     return (
-      <section className='RegistrationPage'>
-        <h2>Register Here!</h2>
+      <>
         {this.state.badEntry && <ValidationError render={this.state.error} />}
         <RegistrationForm onRegistrationSuccess={this.handleRegistration} onRegistrationFail={this.handleRegistrationFail} />
-      </section>
+      </>
     )
   }
 }

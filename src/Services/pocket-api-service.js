@@ -117,6 +117,64 @@ const PocketApiService = {
       })
   },
 
+  addNote(id, data) {
+
+    data['id'] = id
+
+    return fetch(`http://localhost:8000/api/notes/add`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => {
+        if (res.ok) {
+          Promise.resolve();
+        }
+      })
+  },
+
+  editNote(id, data){
+
+    data['id'] = id;
+
+    return fetch(`http://localhost:8000/api/notes/edit`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => {
+        if(res.ok) {
+          Promise.resolve();
+        }
+      })
+  },
+
+  deleteNote(user_id, note_id){
+    let data = {
+      user_id:user_id,
+      note_id:note_id
+    }
+
+    return fetch(`http://localhost:8000/api/notes`, {
+      method: 'DELETE',
+      headers: {
+        'content-type':'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => {
+        if(res.ok){
+          Promise.resolve();
+        }
+      })
+  }
+
+
+
 
 
 

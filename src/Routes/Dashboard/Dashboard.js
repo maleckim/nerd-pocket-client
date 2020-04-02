@@ -11,8 +11,6 @@ import NotecardTest from '../../Components/Notecards/NotecardTest'
 
 
 
-
-
 export default class Dashboard extends Component {
 
   constructor(props) {
@@ -20,18 +18,18 @@ export default class Dashboard extends Component {
     this.state = {
       notecards: [],
       notes:[],
-      user_id: null
+      user_id: null,
     }
   }
 
   componentDidMount(){
     let id = tokenService.getUserId() 
     pocketService.getNoteCards(id).then(notecards => this.setState({notecards}))
-    // pocketService.getNotes(id).then(notes => this.setState({notes}))
   }
 
+
   render() {
-    console.log(this.state)
+    
     return (
       <UserContext.Provider value={{
         notecards: this.state.notecards,

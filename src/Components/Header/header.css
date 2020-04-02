@@ -1,11 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+
+*{
+  font-family: 'Rubik', sans-serif;
+  overflow-x: hidden;
+}
+
+.Main_Header{
+  padding:0;
+}
+
 .Header{
   display:inline-flex;
   align-items: center;
   justify-content: space-between;
-  /* border: 1px solid green; */
-  width: 95vw;
+  width: 103vw;
+  margin-left:-10px;
+  background-color: rgb(137, 18, 221);
 }
 
 a{
   padding-left:25px;
+  text-decoration: none;
+  padding-right:10px;
+  color:white;
 }
+
+.Header_Logout{
+  padding-right:5vw;
+}
+
+.register{
+  margin-right:5vw;
+}
+

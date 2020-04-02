@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Redirect, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import TokenService from '../../Services/token-service'
 import './header.css'
 
@@ -16,7 +16,7 @@ export default class Header extends Component {
     return(
       <div className='Header_Login'>
         <Link to='/login'>Login</Link>
-        <Link to='/register'>Register</Link>
+        <Link className='register' to='/register'>Register</Link>
       </div>
     )
   }
