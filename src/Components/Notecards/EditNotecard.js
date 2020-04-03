@@ -57,9 +57,9 @@ export default class EditNotecard extends React.Component {
               <label for='cardSubject'>Subject</label><br />
               <input type='text' id='cardSubject' name='cardSubject' value={this.state.subject} onChange={e => this.setState({ subject: e.target.value })} /><br />
               <label for='cardQuestion'>Question</label><br />
-              <textarea id='cardQuestion' type='text' name='cardQuestion' value={this.props.question} onChange={e => this.setState({ question: e.target.value })} /><br />
+              <textarea id='cardQuestion' type='text' name='cardQuestion' value={this.state.question} onChange={e => this.setState({ question: e.target.value })} /><br />
               <label for='cardAnswer'>Answer</label><br />
-              <textarea id='cardAnswer' type='text' name='cardAnswer' value={this.props.answer} onChange={e => this.setState({ answer: e.target.value })} /><br />
+              <textarea id='cardAnswer' type='text' name='cardAnswer' value={this.state.answer} onChange={e => this.setState({ answer: e.target.value })} /><br />
               <input type='submit' />
             </form>
           </div>

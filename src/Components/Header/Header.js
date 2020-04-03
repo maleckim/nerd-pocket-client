@@ -31,12 +31,10 @@ export default class Header extends Component {
 
   render(){
     return(
-      <>
         <nav className='Header'>
           <h1><Link to={TokenService.hasUserId() ? '/dashboard':'/'}>Nerd-Pocket</Link></h1>
           {TokenService.hasUserId() ? this.renderLogout() : this.renderLogin()}
         </nav>
-      </>
     )
   }
 }

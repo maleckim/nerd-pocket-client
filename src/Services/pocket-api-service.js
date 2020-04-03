@@ -171,13 +171,52 @@ const PocketApiService = {
           Promise.resolve();
         }
       })
-  }
+  },
 
+  getDeadlines(id) {
+    return fetch(`http://localhost:8000/api/deadlines?userId=${id}`)
+      .then(res => {
+        if (res.ok) {
+          return res.json()
+        }
+      })
+      .then(resJSON => {
+        return resJSON
+      })
+  },
 
+  createDeadline(data){
 
+    return fetch(`http://localhost:8000/api/deadlines`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => {
+        if (res.ok) {
+          Promise.resolve();
+        }
+      })
 
+  },
 
-
+  deleteDeadline(id){
+    
+    return fetch(`http://localhost:8000/api/deadlines`, {
+      method: 'DELETE',
+      headers: {
+        'content-type':'application/json',
+      },
+      body: JSON.stringify({id})
+    })
+      .then(res => {
+        if(res.ok){
+          Promise.resolve();
+        }
+      })
+  },
 }
 
 export default PocketApiService

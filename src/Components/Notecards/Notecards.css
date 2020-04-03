@@ -1,12 +1,13 @@
 .notecards{
   margin-top: 15px;
-  width:45%;
+  width:65%;
   margin:0 auto; 
 }
 
 .notecard{
   text-align: center;
   margin-top:10px;
+  height:25%;
   border:solid 1px black;
   background-color: white;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Notecard.jpg');
@@ -85,4 +86,12 @@ input, textarea{
 
 .feedback p{
   text-decoration: underline rgb(72, 11, 116);
+}
+
+@media (min-width:1000px){
+
+  .notecards{
+    width:30%;
+  }
+
 }

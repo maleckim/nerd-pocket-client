@@ -27,7 +27,7 @@ export default class EditNotecard extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    //implement a patch here
+    
     const id = tokenService.getUserId();
 
     const data = {

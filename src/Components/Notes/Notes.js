@@ -40,15 +40,11 @@ export default class Notes extends Component {
     if(this.state.subject){
       return(
         <>
-        <button className='backButton' onClick={() => this.setState({subject:null})}>
-            back
-        </button>
-        {this.state.notes.map( (a,b) => a.subject == this.state.subject ? <button key={b} onClick={() => this.showContent(a.content,a.id,a.subject,a.topic)}>{a.topic}</button>: null)}
+        {this.state.notes.map( (a,b) => a.subject === this.state.subject ? <button key={b} onClick={() => this.showContent(a.content,a.id,a.subject,a.topic)}>{a.topic}</button>: null)}
         </>
       )
     }
   }
-
 
 
   createFolders = () => {
@@ -59,8 +55,7 @@ export default class Notes extends Component {
 
         if (!uniqueSubjects[`${a.subject}`]) {
           uniqueSubjects[`${a.subject}`] = [a]
-        } 
-
+        }
       })
     }
 
@@ -81,7 +76,8 @@ export default class Notes extends Component {
     }else if(this.state.subject && !this.state.content){
       return(
         <div className='folders'>
-        {this.showTopics()}
+          <h1>{this.state.subject}</h1>
+          {this.showTopics()}
         </div>
       )
     }else{
@@ -93,13 +89,13 @@ export default class Notes extends Component {
     }
   }
  
-
-
-
   render() {  
     return (
       <>
       <AddNote />
+      <button className='button addnote' onClick={() => this.setState({subject:null,content:null})}>
+            back
+        </button>
       {this.renderDisplay()}
       </>
 

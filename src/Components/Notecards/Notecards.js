@@ -1,4 +1,4 @@
-import React, { Component, forwardRef } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import userContext from '../../Context/ApplicationContext'
 import './Notecards.css'
@@ -18,7 +18,6 @@ export default class Notecards extends Component {
 
   render() {
     
-
     return (
       <userContext.Consumer>{
         value => {

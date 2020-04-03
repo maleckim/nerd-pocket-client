@@ -8,8 +8,6 @@ export default function DateChooser(props) {
   const [task, setTask] = useState()
 
 
-  
- 
   return (
     <form onSubmit={props.setDate(date,task)}>
     <label>to-do</label><br />
@@ -32,26 +30,7 @@ export default function DateChooser(props) {
 }
 
 
-// return (
-//   <form onSubmit={props.setDate(date,task)}>
-//   <label>to-do</label><br />
-//   <input type='text' onChange={(e) => setTask(e.target.value)} />
-//   <DatePicker date={date} onDateChange={setDate} locale={enGB}>
-//     {({ inputProps, focused }) => (
-//       <>
-//       <label>date:</label><br />
-//       <input
-//         className={'input' + (focused ? ' -focused' : '')}
-//         {...inputProps}
-//       />
-//       </>
-//     )}
-//   </DatePicker>
 
-//   <input type='submit' />
-//   </form>
-// )
-// }
 
 
 

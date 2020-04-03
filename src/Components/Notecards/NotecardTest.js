@@ -27,11 +27,9 @@ handleInput = (e) => {
   let userAnswer = this.state.userAnswer
 
   this.answerChecker(userAnswer);
-
   question++
 
   this.setState({question})
-  
 }
 
 answerChecker = (guess) => {
@@ -40,7 +38,7 @@ answerChecker = (guess) => {
   answer = answer.toLowerCase().replace(/\s\s+/gi,' ')
   guess = guess.toLowerCase().replace(/\s\s+/gi,' ')
 
-  if(answer == guess){
+  if(answer === guess){
     score++
     this.setState({score})
   }else{
@@ -53,7 +51,6 @@ answerChecker = (guess) => {
   }
 
   this.setState({userAnswer:''})
-  
 }
 
 createTest = () => {

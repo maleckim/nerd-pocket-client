@@ -9,8 +9,6 @@ import pocketService from '../../Services/pocket-api-service'
 import UserContext from '../../Context/ApplicationContext'
 import NotecardTest from '../../Components/Notecards/NotecardTest'
 
-
-
 export default class Dashboard extends Component {
 
   constructor(props) {
@@ -18,6 +16,7 @@ export default class Dashboard extends Component {
     this.state = {
       notecards: [],
       notes:[],
+      deadlines:[],
       user_id: null,
     }
   }
@@ -25,14 +24,16 @@ export default class Dashboard extends Component {
   componentDidMount(){
     let id = tokenService.getUserId() 
     pocketService.getNoteCards(id).then(notecards => this.setState({notecards}))
+    pocketService.getDeadlines(id).then(deadlines => this.setState({deadlines}))
   }
 
 
   render() {
-    
+  
     return (
       <UserContext.Provider value={{
         notecards: this.state.notecards,
+        deadlines: this.state.deadlines
         // notes: this.state.notes
       }}>
         <DynamicDash />

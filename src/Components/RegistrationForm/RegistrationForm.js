@@ -25,7 +25,7 @@ export default class RegistrationForm extends Component {
     else if (username.length <= 2) {
       this.setState({ error: 'please enter a longer username', badEntry: true, username: '', password: '' })
     } else {
-
+      
       const data = {
         userName: username,
         userPass: password
@@ -35,7 +35,6 @@ export default class RegistrationForm extends Component {
       
     }
   }
-
 
 
   render() {
