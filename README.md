@@ -31,4 +31,11 @@
 </ul>
 
 <h2>Screenshots</h2>
+<label>Landing Page</label>
+<img scr='/src/Assets/landingpage.PNG' alt='landing page'>
+<label>Notecards Section</label>
+<img src='/src/Assets/notecards.PNG' alt='note cards'>
+<label>Notes</label>
+<img src='/src/Assets/notes.PNG' alt='notes'>
+<label>Deadlines Section</label>
 <img src='/src/Assets/deadlines.PNG' alt='deadlines'>
