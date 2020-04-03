@@ -29,3 +29,6 @@
   <li>front-end with Zeit</li>
   <li>back-end with Heroku</li>
 </ul>
+
+<h2>Screenshots</h2>
+<img src='/src/Assets/deadlines.PNG' alt='deadlines'>
