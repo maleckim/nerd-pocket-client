@@ -32,7 +32,7 @@
 
 <h2>Screenshots</h2>
 <label>Landing Page</label>
-<img scr='/src/Assets/landingpage.PNG' alt='landing page'>
+<img src='/src/Assets/landingpage.PNG' alt='landing page'>
 <label>Notecards Section</label>
 <img src='/src/Assets/notecards.PNG' alt='note cards'>
 <label>Notes</label>
