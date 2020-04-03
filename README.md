@@ -3,6 +3,7 @@
 <h1>Summary</h1>
 <p>The purpose of this app is too encapsulate some classic studying techniques into one easy to manage place</p>
 <p>While traditional pen and paper is hard to replace tracking down specific notes you took several months ago can be burdensome</p>
+<p>login to some pre-populated data with user: Test, pass: Test. or register for your own account</p>
 
 <h1>Technologies</h1>
 
