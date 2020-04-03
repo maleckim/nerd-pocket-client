@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: 'http://localhost:8000',
+  API_ENDPOINT: 'https://gentle-atoll-12185.herokuapp.com',
   TOKEN_KEY: 'Thingful-Client-Auth-Token',
 }
