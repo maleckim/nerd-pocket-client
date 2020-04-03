@@ -4,7 +4,7 @@ import config from '../config'
 const PocketApiService = {
 
   validateLogin(data, success, fail) {
-    return fetch(`http://localhost:8000/api/validateuser`, {
+    return fetch(`${config.API_ENDPOINT}/api/validateuser`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -27,7 +27,7 @@ const PocketApiService = {
 
 
   registerUser(data, success, fail) {
-    return fetch(`http://localhost:8000/api/adduser`, {
+    return fetch(`${config.API_ENDPOINT}/api/adduser`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -43,7 +43,7 @@ const PocketApiService = {
   },
 
   getNoteCards(id) {
-    return fetch(`http://localhost:8000/api/notecards?userId=${id}`)
+    return fetch(`${config.API_ENDPOINT}/api/notecards?userId=${id}`)
       .then(res => {
         if (res.ok) {
           return res.json()
@@ -58,7 +58,7 @@ const PocketApiService = {
 
     data['id'] = id
 
-    return fetch(`http://localhost:8000/api/notecards`, {
+    return fetch(`${config.API_ENDPOINT}/api/notecards`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -73,7 +73,7 @@ const PocketApiService = {
   },
 
   deleteNoteCard(id) {
-    return fetch(`http://localhost:8000/api/notecards`, {
+    return fetch(`${config.API_ENDPOINT}/api/notecards`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
@@ -91,7 +91,7 @@ const PocketApiService = {
 
     data['id'] = id;
 
-    return fetch(`http://localhost:8000/api/notecards/edit`, {
+    return fetch(`${config.API_ENDPOINT}/api/notecards/edit`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -106,7 +106,7 @@ const PocketApiService = {
   },
 
   getNotes(id) {
-    return fetch(`http://localhost:8000/api/notes?userId=${id}`)
+    return fetch(`${config.API_ENDPOINT}/api/notes?userId=${id}`)
       .then(res => {
         if (res.ok) {
           return res.json()
@@ -121,7 +121,7 @@ const PocketApiService = {
 
     data['id'] = id
 
-    return fetch(`http://localhost:8000/api/notes/add`, {
+    return fetch(`${config.API_ENDPOINT}/api/notes/add`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -139,7 +139,7 @@ const PocketApiService = {
 
     data['id'] = id;
 
-    return fetch(`http://localhost:8000/api/notes/edit`, {
+    return fetch(`${config.API_ENDPOINT}/api/notes/edit`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -159,7 +159,7 @@ const PocketApiService = {
       note_id:note_id
     }
 
-    return fetch(`http://localhost:8000/api/notes`, {
+    return fetch(`${config.API_ENDPOINT}/api/notes`, {
       method: 'DELETE',
       headers: {
         'content-type':'application/json',
@@ -174,7 +174,7 @@ const PocketApiService = {
   },
 
   getDeadlines(id) {
-    return fetch(`http://localhost:8000/api/deadlines?userId=${id}`)
+    return fetch(`${config.API_ENDPOINT}/api/deadlines?userId=${id}`)
       .then(res => {
         if (res.ok) {
           return res.json()
@@ -187,7 +187,7 @@ const PocketApiService = {
 
   createDeadline(data){
 
-    return fetch(`http://localhost:8000/api/deadlines`, {
+    return fetch(`${config.API_ENDPOINT}/api/deadlines`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -204,7 +204,7 @@ const PocketApiService = {
 
   deleteDeadline(id){
     
-    return fetch(`http://localhost:8000/api/deadlines`, {
+    return fetch(`${config.API_ENDPOINT}/api/deadlines`, {
       method: 'DELETE',
       headers: {
         'content-type':'application/json',

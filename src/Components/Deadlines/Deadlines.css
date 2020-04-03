@@ -64,3 +64,23 @@
   margin-bottom: 5px;
   height: 20%;
 }
+
+@media (min-width:1000px){
+
+  .deadline{
+    width:25%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .newDeadline{
+    font-size:30px;
+  }
+
+  .newDeadline form{
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+}

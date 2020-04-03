@@ -34,7 +34,6 @@ export default class Dashboard extends Component {
       <UserContext.Provider value={{
         notecards: this.state.notecards,
         deadlines: this.state.deadlines
-        // notes: this.state.notes
       }}>
         <DynamicDash />
         <Route exact path="/dashboard/notecards" component={Notecards} />

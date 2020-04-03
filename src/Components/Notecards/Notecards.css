@@ -94,4 +94,17 @@ input, textarea{
     width:30%;
   }
 
+  .testForm{
+    margin-top:5%;
+  }
+
+  .testForm label{
+    font-size:25px;
+  }
+
+  .notecardTest input{
+    height:3vh;
+    width: 30%;
+  }
+
 }
