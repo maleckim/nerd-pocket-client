@@ -32,7 +32,6 @@ export default class EditNotecard extends React.Component {
     const id = tokenService.getUserId();
 
     pocketService.editNoteCard(id, this.state)
-    window.location.reload()
     this.closeModal()
   }
 

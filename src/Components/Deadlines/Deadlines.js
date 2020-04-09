@@ -31,13 +31,10 @@ export default class Deadlines extends Component {
     }
 
     pocketApi.createDeadline(data);
-    window.location.reload();
-    
   }
 
   deleteDeadline = (id) => {
     pocketApi.deleteDeadline(id);
-    window.location.reload();
   }
 
   

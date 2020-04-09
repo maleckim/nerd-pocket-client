@@ -3,6 +3,7 @@ import AddNote from './AddNote'
 import tokenService from '../../Services/token-service'
 import pocketService from '../../Services/pocket-api-service'
 import NoteContent from './NoteContent'
+import Form from '../Utils/Form'
 import './Notes.css'
 
 export default class Notes extends Component {
@@ -66,6 +67,22 @@ export default class Notes extends Component {
     )
   }
 
+  handleSubmit = (e, subject, topic, content) => {
+    e.preventDefault()
+    
+    const id = tokenService.getUserId();
+
+    const data = {
+      user_id: id,
+      subject: subject,
+      topic: topic,
+      content: content
+    }
+
+    console.log(data)
+    pocketService.addNote(id, data)
+  }
+
   renderDisplay = () => {
     if(!this.state.subject){
       return(
@@ -92,10 +109,9 @@ export default class Notes extends Component {
   render() {  
     return (
       <>
-      <AddNote />
-      <button className='button addnote' onClick={() => this.setState({subject:null,content:null})}>
-            back
-        </button>
+      <AddNote>
+        <Form submit={this.handleSubmit} />
+      </AddNote>
       {this.renderDisplay()}
       </>
 

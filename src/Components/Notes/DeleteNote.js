@@ -9,7 +9,6 @@ export default function DeleteNote(props){
     const user_id = tokenService.getUserId();
     const note_id = props.note_id;
     pocketApi.deleteNote(user_id, note_id)
-    window.location.reload();
   }
 
 

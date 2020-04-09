@@ -68,6 +68,7 @@ const PocketApiService = {
       .then(res => {
         if (res.ok) {
           Promise.resolve();
+          window.location.reload();
         }
       })
   },
@@ -83,6 +84,7 @@ const PocketApiService = {
       .then(res => {
         if (res.ok) {
           Promise.resolve();
+          window.location.reload();
         }
       })
   },
@@ -131,6 +133,7 @@ const PocketApiService = {
       .then(res => {
         if (res.ok) {
           Promise.resolve();
+          window.location.reload();
         }
       })
   },
@@ -149,6 +152,7 @@ const PocketApiService = {
       .then(res => {
         if(res.ok) {
           Promise.resolve();
+          window.location.reload();
         }
       })
   },
@@ -169,6 +173,7 @@ const PocketApiService = {
       .then(res => {
         if(res.ok){
           Promise.resolve();
+          window.location.reload();
         }
       })
   },
@@ -197,6 +202,7 @@ const PocketApiService = {
       .then(res => {
         if (res.ok) {
           Promise.resolve();
+          window.location.reload();
         }
       })
 
@@ -214,6 +220,7 @@ const PocketApiService = {
       .then(res => {
         if(res.ok){
           Promise.resolve();
+          window.location.reload();
         }
       })
   },

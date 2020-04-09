@@ -38,7 +38,6 @@ export default class EditNotecard extends React.Component {
     }
 
     pocketService.addNoteCards(id, data)
-    window.location.reload()
     this.closeModal()
   }
 

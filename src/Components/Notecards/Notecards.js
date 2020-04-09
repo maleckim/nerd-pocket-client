@@ -12,7 +12,6 @@ export default class Notecards extends Component {
 
   deleteNote = (id) => {
     pocketService.deleteNoteCard(id)
-    window.location.reload()
   }
 
 
