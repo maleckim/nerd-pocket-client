@@ -25,12 +25,16 @@ export default class NotecardTest extends Component {
     let { question } = this.state
     let userAnswer = this.state.userAnswer
 
+    //answerChecker is a helper function to test if the answer is correct
     this.answerChecker(userAnswer);
     question++
 
     this.setState({ question })
   }
 
+
+  //inside of answer checker we are checking for the correct response, if its correct we increment the score
+  //otherwise we create an object of the data from the missed question, and feed that our add wrong method created in state.
   answerChecker = (guess) => {
     let { answer, question } = this.state.notecards[this.state.question]
     let { score } = this.state
@@ -91,7 +95,12 @@ export default class NotecardTest extends Component {
     let wrong = this.state.wrong
 
     return (
-      Object.values(wrong).map(a => <div className='feedback'><p>Question: {a[0]}?<br /> You answered -- '{a[2]}'<br /> correct answer was -- '{a[1]}'.</p></div>)
+      Object.values(wrong).map(a =>
+        <div className='feedback'>
+          <p>Question: {a[0]}?<br />
+            You answered -- '{a[2]}'<br />
+            correct answer was -- '{a[1]}'.</p>
+        </div>)
     )
   }
 

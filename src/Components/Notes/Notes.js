@@ -18,6 +18,8 @@ export default class Notes extends Component {
 
   }
 
+
+  //once we have clicked on a subject, the state is updated, and topics are populated based on having the same subject
   populateTopics = (subject) => {
 
     if (this.state.notes) {
@@ -48,6 +50,8 @@ export default class Notes extends Component {
   }
 
 
+  //for better organization we want to group together subjects from our notes
+  //we map through all of our notes and hashmap them only showing values that are unique for subject
   createFolders = () => {
     let uniqueSubjects = {};
 

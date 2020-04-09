@@ -29,7 +29,6 @@ export default class Deadlines extends Component {
       deadline: date,
       task: task
     }
-
     pocketApi.createDeadline(data);
   }
 
@@ -37,8 +36,8 @@ export default class Deadlines extends Component {
     pocketApi.deleteDeadline(id);
   }
 
-
-
+  //this function is rendering my pseudo add deadline component
+  //when add deadline is clicked on ln53 it toggles a state switch the render the adding form
   conditionalRender = (deadlines) => {
 
     if (this.state.addDeadline) {
