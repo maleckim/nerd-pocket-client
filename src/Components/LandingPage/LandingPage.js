@@ -1,5 +1,5 @@
-import React,{useState} from 'react';
-import './LandingPage.css';
+import React,{useState} from 'react'
+import './LandingPage.css'
 import notecardIMG from '../../Assets/notecards.PNG'
 import testIMG from '../../Assets/test.PNG'
 import notesIMG from '../../Assets/notes.PNG'
@@ -29,7 +29,7 @@ export default function LandingPage(props){
     <section className='fullPage'>
       <div className='leftBox'>
         <div className='leftContent'>
-          <h1>All in one hub for your learning needs!</h1>
+          <h1>All-in-one hub for your learning needs!</h1>
           <p>keep all of your learning essentials in one easy to manage place</p>
           <button onClick={() => props.history.push('/register')}>Get started</button>
         </div>

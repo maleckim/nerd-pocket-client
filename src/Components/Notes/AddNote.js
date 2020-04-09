@@ -1,6 +1,5 @@
-import React from 'react';
+import React from 'react'
 import Popup from 'reactjs-popup'
-// import './Notecards.css'
 import pocketService from '../../Services/pocket-api-service'
 import tokenService from '../../Services/token-service'
 

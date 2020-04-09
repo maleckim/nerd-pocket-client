@@ -1,6 +1,6 @@
-import React from 'react';
-import EditNote from './EditNote';
-import DeleteNote from './DeleteNote';
+import React from 'react'
+import EditNote from './EditNote'
+import DeleteNote from './DeleteNote'
 
 
 export default function NoteContent(props){

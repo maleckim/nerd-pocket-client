@@ -1,5 +1,5 @@
-import React from 'react';
-import pocketApi from '../../Services/pocket-api-service';
+import React from 'react'
+import pocketApi from '../../Services/pocket-api-service'
 import tokenService from '../../Services/token-service'
 
 

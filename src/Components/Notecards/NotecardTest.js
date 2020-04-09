@@ -1,5 +1,4 @@
-import React,{Component} from 'react';
-// import UserContext from '../../Context/ApplicationContext';
+import React,{Component} from 'react'
 
 
 export default class NotecardTest extends Component{

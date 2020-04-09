@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import ApiService from '../../Services/pocket-api-service'
 import './LoginForm.css'
 

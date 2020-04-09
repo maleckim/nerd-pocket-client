@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom'
 import LandingPage from './Components/LandingPage/LandingPage'
 import Header from './Components/Header/Header'
