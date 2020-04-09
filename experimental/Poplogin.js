@@ -1,27 +1,27 @@
-import React from 'react';
+import React from 'react'
 import Popup from 'reactjs-popup'
 import { Link } from 'react-router-dom'
 import ValidationError from '../src/Errors/ValidationError'
 import ApiService from '../src/Services/pocket-api-service'
-import UserContext from '../src/Context/ApplicationContext';
+import UserContext from '../src/Context/ApplicationContext'
 
 
 
 export default class Poplogin extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = { 
       open: false,
-     };
+     }
 
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
   }
   openModal() {
-    this.setState({ open: true });
+    this.setState({ open: true })
   }
   closeModal() {
-    this.setState({ open: false });
+    this.setState({ open: false })
   }
 
 
@@ -52,6 +52,6 @@ export default class Poplogin extends React.Component {
           </div>
         </Popup>
       </div>
-    );
+    )
   }
 }

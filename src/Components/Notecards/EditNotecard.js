@@ -8,13 +8,13 @@ import './Notecards.css'
 export default class EditNotecard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       open: false,
       question: this.props.question,
       answer: this.props.answer,
       subject: this.props.subject,
       note_id: this.props.note_id
-     };
+    };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -28,14 +28,14 @@ export default class EditNotecard extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
- 
+
     const id = tokenService.getUserId();
 
     pocketService.editNoteCard(id, this.state)
     this.closeModal()
   }
 
-  
+
   render() {
     return (
       <>

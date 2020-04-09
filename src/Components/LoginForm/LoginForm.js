@@ -40,7 +40,7 @@ export default class LogMeIn extends React.Component {
             <label>User Name</label><br />
             <input type='text' name='userName' placeholder='username' onChange={e => this.setState({ user: e.target.value })} /><br />
             <label>Password</label><br />
-            <input type='text' name='passWord' placeholder='password' onChange={e => this.setState({ pass: e.target.value })} /><br />
+            <input type='password' name='passWord' placeholder='password' onChange={e => this.setState({ pass: e.target.value })} required /><br />
             <input type='submit' />
           </form>
         </div>

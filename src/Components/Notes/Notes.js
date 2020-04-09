@@ -21,9 +21,9 @@ export default class Notes extends Component {
   populateTopics = (subject) => {
 
     if (this.state.notes) {
-      this.setState({subject:subject})
+      this.setState({ subject: subject })
     }
-  
+
   }
 
   showContent = (content, id, specSubject, specTopic) => {
@@ -34,14 +34,14 @@ export default class Notes extends Component {
       specSubject: specSubject,
       specTopic: specTopic
     })
-    
+
   }
 
   showTopics = () => {
-    if(this.state.subject){
-      return(
+    if (this.state.subject) {
+      return (
         <>
-        {this.state.notes.map( (a,b) => a.subject === this.state.subject ? <button key={b} onClick={() => this.showContent(a.content,a.id,a.subject,a.topic)}>{a.topic}</button>: null)}
+          {this.state.notes.map((a, b) => a.subject === this.state.subject ? <button key={b} onClick={() => this.showContent(a.content, a.id, a.subject, a.topic)}>{a.topic}</button> : null)}
         </>
       )
     }
@@ -61,7 +61,7 @@ export default class Notes extends Component {
     }
 
     return (
-      Object.keys(uniqueSubjects).map( (a,b) =>
+      Object.keys(uniqueSubjects).map((a, b) =>
         <button key={b} onClick={() => this.populateTopics(a)}>{a}</button>
       )
     )
@@ -69,7 +69,7 @@ export default class Notes extends Component {
 
   handleSubmit = (e, subject, topic, content) => {
     e.preventDefault()
-    
+
     const id = tokenService.getUserId();
 
     const data = {
@@ -84,35 +84,35 @@ export default class Notes extends Component {
   }
 
   renderDisplay = () => {
-    if(!this.state.subject){
-      return(
+    if (!this.state.subject) {
+      return (
         <div className='folders'>
           {this.createFolders()}
         </div>
       )
-    }else if(this.state.subject && !this.state.content){
-      return(
+    } else if (this.state.subject && !this.state.content) {
+      return (
         <div className='folders'>
           <h1>{this.state.subject}</h1>
           {this.showTopics()}
         </div>
       )
-    }else{
-      return(
+    } else {
+      return (
         <div className='noteContent'>
-          <NoteContent id={this.state.id} topic={this.state.specTopic} subject={this.state.specSubject} content={this.state.content} return={() => this.setState({content:null})} />
+          <NoteContent id={this.state.id} topic={this.state.specTopic} subject={this.state.specSubject} content={this.state.content} return={() => this.setState({ content: null })} />
         </div>
       )
     }
   }
- 
-  render() {  
+
+  render() {
     return (
       <>
-      <AddNote>
-        <Form submit={this.handleSubmit} />
-      </AddNote>
-      {this.renderDisplay()}
+        <AddNote>
+          <Form submit={this.handleSubmit} />
+        </AddNote>
+        {this.renderDisplay()}
       </>
 
     )

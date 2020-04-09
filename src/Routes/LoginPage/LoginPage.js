@@ -14,7 +14,7 @@ export default class LoginPage extends Component {
   handleLoginSucces = (message) => {
     const { history } = this.props
     tokenService.saveUserId(message.success)
-    history.push('/dashboard') 
+    history.push('/dashboard/notecards') 
     window.location.reload()
   }
 

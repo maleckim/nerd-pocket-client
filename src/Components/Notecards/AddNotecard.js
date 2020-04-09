@@ -8,12 +8,12 @@ import tokenService from '../../Services/token-service'
 export default class EditNotecard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       open: false,
       question: this.props.question,
       answer: this.props.answer,
       subject: this.props.subject
-     };
+    };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -27,7 +27,7 @@ export default class EditNotecard extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    
+
     const id = tokenService.getUserId();
 
     const data = {
@@ -41,7 +41,7 @@ export default class EditNotecard extends React.Component {
     this.closeModal()
   }
 
-  
+
   render() {
     return (
       <>
