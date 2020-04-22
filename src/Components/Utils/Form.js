@@ -1,9 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
+
 
 export default function Form(props) {
-  const [subject, setSubject] = useState()
-  const [topic, setTopic] = useState()
-  const [content, setContent] = useState()
+  const [subject, setSubject] = useState();
+  const [topic, setTopic] = useState();
+  const [content, setContent] = useState();
+  
 
   return (
     <>

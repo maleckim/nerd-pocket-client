@@ -14,16 +14,16 @@ export default class LogMeIn extends React.Component {
 
 
   handleSubmit = e => {
-    e.preventDefault()
-    const { user, pass } = this.state
+    e.preventDefault();
+    const { user, pass } = this.state;
 
     const data = {
       userName: user,
       userPassword: pass
     }
 
-    ApiService.validateLogin(data, this.props.onLoginSuccess, this.props.onLoginFail)
-    this.setState({ user: null, pass: null })
+    ApiService.validateLogin(data, this.props.onLoginSuccess, this.props.onLoginFail);
+    this.setState({ user: null, pass: null });
   }
 
 

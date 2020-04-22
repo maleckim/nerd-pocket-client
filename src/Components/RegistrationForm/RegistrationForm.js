@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import ValidationError from '../../Errors/ValidationError'
-import ApiService from '../../Services/pocket-api-service'
-import './RegistrationForm.css'
+import React, { Component } from 'react';
+import ValidationError from '../../Errors/ValidationError';
+import ApiService from '../../Services/pocket-api-service';
+import './RegistrationForm.css';
+
 
 export default class RegistrationForm extends Component {
   constructor(props) {
@@ -17,7 +18,8 @@ export default class RegistrationForm extends Component {
 
   validateEntry = (e) => {
     e.preventDefault();
-    const { username, password } = this.state
+    const { username, password } = this.state;
+    
 
     if (password.length <= 5) {
       this.setState({ error: 'password must be longer than 5 characters', badEntry: true, username: '', password: '' })

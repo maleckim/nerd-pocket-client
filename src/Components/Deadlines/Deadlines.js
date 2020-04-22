@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import DateChooser from '../Utils/DateChooser'
-import { format } from 'date-fns'
-import { enGB } from 'date-fns/locale'
-import userContext from '../../Context/ApplicationContext'
-import tokenService from '../../Services/token-service'
-import pocketApi from '../../Services/pocket-api-service'
-import './Deadlines.css'
+import React, { Component } from 'react';
+import DateChooser from '../Utils/DateChooser';
+import { format } from 'date-fns';
+import { enGB } from 'date-fns/locale';
+import userContext from '../../Context/ApplicationContext';
+import tokenService from '../../Services/token-service';
+import pocketApi from '../../Services/pocket-api-service';
+import './Deadlines.css';
 
 
 
@@ -20,8 +20,8 @@ export default class Deadlines extends Component {
   }
 
   setDate = (date, task) => (e) => {
-    e.preventDefault()
-    date = format(date, 'dd MMM yyyy', { locale: enGB })
+    e.preventDefault();
+    date = format(date, 'dd MMM yyyy', { locale: enGB });
     const id = tokenService.getUserId();
 
     let data = {
@@ -29,6 +29,7 @@ export default class Deadlines extends Component {
       deadline: date,
       task: task
     }
+
     pocketApi.createDeadline(data);
   }
 

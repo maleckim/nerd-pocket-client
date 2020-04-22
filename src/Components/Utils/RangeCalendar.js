@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import { format } from 'date-fns'
-import { enGB } from 'date-fns/locale'
-import { DateRangePickerCalendar, START_DATE } from 'react-nice-dates'
-import 'react-nice-dates/build/style.css'
-import './Deadlines.css'
+import React, { useState } from 'react';
+import { format } from 'date-fns';
+import { enGB } from 'date-fns/locale';
+import { DateRangePickerCalendar, START_DATE } from 'react-nice-dates';
+import 'react-nice-dates/build/style.css';
+import './Deadlines.css';
+
 
 
 export default function DateRangePickerCalendarExample() {

@@ -1,8 +1,8 @@
-import React from 'react'
-import Popup from 'reactjs-popup'
-import './Notecards.css'
-import pocketService from '../../Services/pocket-api-service'
-import tokenService from '../../Services/token-service'
+import React from 'react';
+import Popup from 'reactjs-popup';
+import './Notecards.css';
+import pocketService from '../../Services/pocket-api-service';
+import tokenService from '../../Services/token-service';
 
 
 export default class EditNotecard extends React.Component {
@@ -37,8 +37,8 @@ export default class EditNotecard extends React.Component {
       answer: this.state.answer
     }
 
-    pocketService.addNoteCards(id, data)
-    this.closeModal()
+    pocketService.addNoteCards(id, data);
+    this.closeModal();
   }
 
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 
 export default class NotecardTest extends Component {
@@ -29,7 +29,7 @@ export default class NotecardTest extends Component {
     this.answerChecker(userAnswer);
     question++
 
-    this.setState({ question })
+    this.setState({ question });
   }
 
 
@@ -38,8 +38,8 @@ export default class NotecardTest extends Component {
   answerChecker = (guess) => {
     let { answer, question } = this.state.notecards[this.state.question]
     let { score } = this.state
-    answer = answer.toLowerCase().replace(/\s\s+/gi, ' ')
-    guess = guess.toLowerCase().replace(/\s\s+/gi, ' ')
+    answer = answer.toLowerCase().replace(/\s\s+/gi, ' ');
+    guess = guess.toLowerCase().replace(/\s\s+/gi, ' ');
 
     if (answer === guess) {
       score++
@@ -50,10 +50,10 @@ export default class NotecardTest extends Component {
         correct: answer,
         users: guess
       }
-      this.state.addwrong(data, this.state.question)
+      this.state.addwrong(data, this.state.question);
     }
 
-    this.setState({ userAnswer: '' })
+    this.setState({ userAnswer: '' });
   }
 
   createTest = () => {

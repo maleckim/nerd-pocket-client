@@ -31,7 +31,8 @@ export default class EditNotecard extends React.Component {
  
     const id = tokenService.getUserId();
 
-    pocketService.editNote(id, this.state)
+    pocketService.editNote(id, this.state);
+    
   }
 
   

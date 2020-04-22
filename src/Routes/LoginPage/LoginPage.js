@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import LoginForm from '../../Components/LoginForm/LoginForm'
-import ValidationError from '../../Errors/ValidationError'
-import tokenService from '../../Services/token-service'
+import React, { Component } from 'react';
+import LoginForm from '../../Components/LoginForm/LoginForm';
+import ValidationError from '../../Errors/ValidationError';
+import tokenService from '../../Services/token-service';
+
 
 export default class LoginPage extends Component {
   constructor(props){
@@ -12,10 +13,11 @@ export default class LoginPage extends Component {
   }
 
   handleLoginSucces = (message) => {
-    const { history } = this.props
-    tokenService.saveUserId(message.success)
-    history.push('/dashboard/notecards') 
-    window.location.reload()
+    const { history } = this.props;
+    tokenService.saveUserId(message.success);
+    history.push('/dashboard/notecards'); 
+    window.location.reload();
+
   }
 
   handleLoginFail = (message) => {
@@ -23,7 +25,8 @@ export default class LoginPage extends Component {
       error: message
     })
     const { history } = this.props
-    history.push('/login') 
+    history.push('/login'); 
+
   }
 
   render() {

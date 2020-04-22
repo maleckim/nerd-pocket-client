@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import './LandingPage.css'
-import notecardIMG from '../../Assets/notecards.PNG'
-import testIMG from '../../Assets/test.PNG'
-import notesIMG from '../../Assets/notes.PNG'
-import deadlinesIMG from '../../Assets/deadlines.PNG'
+import React, { useState } from 'react';
+import './LandingPage.css';
+import notecardIMG from '../../Assets/notecards.PNG';
+import testIMG from '../../Assets/test.PNG';
+import notesIMG from '../../Assets/notes.PNG';
+import deadlinesIMG from '../../Assets/deadlines.PNG';
 
 
 
@@ -21,9 +21,9 @@ export default function LandingPage(props) {
   setInterval(function () {
     count = count + 1;
     if (count >= 4) {
-      count = 0
+      count = 0;
     }
-    setCount(count)
+    setCount(count);
   }, 5000);
 
 
