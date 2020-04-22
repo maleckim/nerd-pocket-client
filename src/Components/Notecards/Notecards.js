@@ -26,7 +26,7 @@ export default class Notecards extends Component {
             
               <div className='topButtons'>
                 <AddNotecard className='addNote' />
-                <Link to='/dashboard/notecards/test'><button>Test</button></Link>
+                <Link to='/dashboard/notecards/test'><button className='testbutton'>Test</button></Link>
               </div>
               <div className='notecards'>
               {value.notecards.map((a, b) =>

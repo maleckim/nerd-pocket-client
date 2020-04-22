@@ -90,6 +90,10 @@ input, textarea{
   text-decoration: underline rgb(72, 11, 116);
 }
 
+.testbutton{
+  width:60px;
+}
+
 @media (min-width:1000px){
 
   .notecards{
