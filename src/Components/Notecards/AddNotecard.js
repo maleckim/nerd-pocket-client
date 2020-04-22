@@ -10,9 +10,9 @@ export default class EditNotecard extends React.Component {
     super(props);
     this.state = {
       open: false,
-      question: this.props.question,
-      answer: this.props.answer,
-      subject: this.props.subject
+      question: null,
+      answer: null,
+      subject: null
     };
 
     this.openModal = this.openModal.bind(this);
@@ -41,8 +41,18 @@ export default class EditNotecard extends React.Component {
     this.closeModal();
   }
 
+  enableButtonWhenContent = () => {
+    if(this.state.question && this.state.answer && this.state.subject){
+      return false;
+    }else{
+      return true;
+    }
+  }
+
 
   render() {
+    let buttonStatus = this.enableButtonWhenContent();
+
     return (
       <>
         <button className="button" onClick={this.openModal}>
@@ -65,7 +75,7 @@ export default class EditNotecard extends React.Component {
               <textarea id='cardQuestion' type='text' name='cardQuestion' value={this.props.question} onChange={e => this.setState({ question: e.target.value })} /><br />
               <label for='cardAnswer'>Answer</label><br />
               <textarea id='cardAnswer' type='text' name='cardAnswer' value={this.props.answer} onChange={e => this.setState({ answer: e.target.value })} /><br />
-              <input type='submit' />
+              <input type='submit' disabled={buttonStatus} />
             </form>
           </div>
         </Popup>

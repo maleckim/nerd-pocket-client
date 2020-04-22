@@ -33,6 +33,7 @@ export default class LogMeIn extends React.Component {
       <section className='loginPage'>
         <div className='logInHead'>
           <h1>Sign in to Nerd-Pocket!</h1>
+          <h4>For demo, User: Test Pass: Test</h4>
         </div>
 
         <div className='signIn'>

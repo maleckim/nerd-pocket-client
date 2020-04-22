@@ -87,6 +87,14 @@ export default class Notes extends Component {
     pocketService.addNote(id, data)
   }
 
+  decideBack = () => {
+    if(this.state.content){
+      this.setState({content:null});
+    }else if(this.state.subject){
+      this.setState({subject:null})
+    }
+  }
+
   renderDisplay = () => {
     if (!this.state.subject) {
       return (
@@ -116,6 +124,7 @@ export default class Notes extends Component {
         <AddNote>
           <Form submit={this.handleSubmit} />
         </AddNote>
+        <button onClick={() => this.decideBack()}>back</button>
         {this.renderDisplay()}
       </>
 
