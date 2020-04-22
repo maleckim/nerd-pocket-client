@@ -19,6 +19,7 @@ import AddNote from './Components/Notes/AddNote'
 import DeleteNote from './Components/Notes/DeleteNote'
 import EditNote from './Components/Notes/EditNote'
 import NoteContent from './Components/Notes/NoteContent'
+import Registration from './Components/RegistrationForm/RegistrationForm'
 
 
 
@@ -27,6 +28,12 @@ describe('General tests' , () => {
   it('Landing page renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<LandingPage />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
+  it('Landing page renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Router><Registration /></Router>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
